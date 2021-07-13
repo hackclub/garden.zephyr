@@ -251,12 +251,12 @@ const plantOptions = [
     "🌾"
 ]
 
-let audio = new Audio('pop.mp3')
-
 function setPlant(e) {
     const randomPlant = plantOptions[Math.floor(Math.random()*plantOptions.length)]
     e.innerText = randomPlant
 
+    let audio = new Audio('pop.mp3')
+    audio.currentTime = 1
     audio.play()
 }
 </script>

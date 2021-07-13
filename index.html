@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>garden</title>
         <style>
             html, body {
@@ -13,6 +14,7 @@
                 margin: 0;
                 padding: 0;
                 width: 50px;
+		text-align: center;
             }
         </style>
     </head>
@@ -252,6 +254,10 @@ const plantOptions = [
 ]
 
 function setPlant(e) {
+    if (e.innerText != "~") {
+        return
+    }
+
     const randomPlant = plantOptions[Math.floor(Math.random()*plantOptions.length)]
     e.innerText = randomPlant
 
